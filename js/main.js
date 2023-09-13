@@ -1,22 +1,5 @@
 'use strict'
 
-const se = document.querySelector('.search');
-const sie = se.querySelector('input');
-
-se.addEventListener('click',function(){
-  sie.focus();
-});
-
-sie.addEventListener('focus',function(){
-  se.classList.add('focused');
-  sie.setAttribute('placeholder','통합검색');
-});
-
-sie.addEventListener('blur',function(){
-  se.classList.remove('focused');
-  sie.setAttribute('placeholder','');
-});
-
 const tte = document.querySelector('#to-top');
 
 tte.addEventListener('click',function(){
@@ -131,6 +114,3 @@ spyes.forEach(function( spye ){
      .setClassToggle(spye, 'show')
      .addTo( new ScrollMagic.Controller() );
 });
-
-const thisyear = document.querySelector('.this-year');
-thisyear.textContent = new Date().getFullYear();
